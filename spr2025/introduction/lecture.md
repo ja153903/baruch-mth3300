@@ -6,9 +6,9 @@ author: Jaime Abbariao
 
 # Self-introductions
 
-- Jaime Abbariao
-- Graduated from Baruch in 2017 and from NYU in 2020
-- Currently a software engineer at [Figma](https://www.figma.com)
+- I'm Jaime Abbariao
+- Graduated from Baruch in 2017 and NYU in 2020
+- Currently a software engineer at [Figma](https://www.figma.com) working on the user growth team
 
 <!-- end_slide -->
 
@@ -16,6 +16,7 @@ author: Jaime Abbariao
 
 - We meet on Tuesday and Thursday at 5:40pm (unless Baruch is on one of those weird schedule)
 - Class will be fast-paced as there's a lot of material to cover
+  - If you do think that it's going way too fast, please tell me to slow down.
 - We'll explore topics like REST APIs and even UI development with Python
 
 <!-- end_slide -->
