@@ -6,4 +6,5 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "neovim>=0.3.1",
+    "presenterm-export>=0.2.6",
 ]

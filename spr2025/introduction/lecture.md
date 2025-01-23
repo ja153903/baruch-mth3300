@@ -8,22 +8,19 @@ author: Jaime Abbariao
 
 - I'm Jaime Abbariao
 - Graduated from Baruch in 2017 and NYU in 2020
-- Currently a software engineer at [Figma](https://www.figma.com) working on the user growth team
+- Currently a software engineer at [Figma](https://www.figma.com)
 
 <!-- end_slide -->
 
 # About this class
 
-- We meet on Tuesday and Thursday at 5:40pm (unless Baruch is on one of those weird schedule)
-- Class will be fast-paced as there's a lot of material to cover
-  - If you do think that it's going way too fast, please tell me to slow down.
-- We'll explore topics like REST APIs and even UI development with Python
+- We meet on Tuesday and Thursday at 5:40pm in 6-125
+- Class will be fast-paced
+- Mixed focus on implementing math-related problems and practical tools
 
 <!-- end_slide -->
 
 # Syllabus
-
-Here is a link to the [syllabus online](https://www.jabbariao.com/baruch-mth3300/spr2025).
 
 ## Course grading
 
@@ -47,6 +44,9 @@ Exams will generally be cumulative in nature because we're going to continue bui
 - C-: 70-72
 - D:  65-69
 - F:  0-64
+
+These grades are subject to change (in your favor). This is my first time teaching a class so depending
+on how the class does on exams, I'll communicate how these grades will change.
 
 <!-- end_slide -->
 
@@ -101,13 +101,43 @@ Just make sure that you prepend your email subject with `MTH 3300`.
 
 Programming is the process of creating instructions that a computer can follow to perform specific tasks.
 
-At its core, programming is about solving problems. Just like you might use a recipe to bake a cake, you use programming to solve
-problems, automate tasks, or create applications.
+A computer program follows an **algorithm** which is a set of instructions intended to solve some problem.
 
-Since computers understand binary, we need programming languages to allow us to write instructions in a more human-readable form which
-are then translated to binary for the computer to execute.
+## Pseudocode
 
-In this class we'll use the Python programming language.
+We can express algorithms in pseudocode which is notation that resembles a programming language.
+
+For example, let's say that we want to write a program that prints "Fizz" if a number is divisible by 3,
+"Buzz" if a number is divisible by 5, and "FizzBuzz" if the number is divisible by both 3 and 5.
+
+How can we solve this with pseudocode?
+
+```text
+if number is divisible by 3 and number is divisible by 4 then
+  print "FizzBuzz"
+else if number is divisible by 3 then
+  print "Fizz"
+else if number is divisible by 5 then
+  print "Buzz
+end
+```
+
+The important aspect about pseudocode is that you're expressing your thoughts in a manner
+that is structurally similar to how you're going to write code.
+
+**This is going to be an important aspect during exams!** If you forget the syntax for certain things, but you
+can show that you know how to express your ideas with pseudocode, you will earn points.
+
+<!-- end_slide -->
+
+# What is programming?
+
+## Programming languages
+
+Obviously, we cannot run computer programs with just pseudocode.
+
+In order to create computer programs that can be transformed into machine language (binary),
+we need a human-readable language.
 
 <!-- end_slide -->
 
@@ -123,21 +153,15 @@ Python has positioned itself as a great introductory programming language for th
 
 <!-- end_slide -->
 
-
 # Introduction to Python
 
-## A first look
+## Hello, World!
 
 Here's our canonical introduction to Python!
 
 ```python
-def hello_world():
-    print("Hello, world!")
-
-hello_world() # Outputs: "Hello, world!"
+print("Hello, world!")
 ```
-
-The above code snippet creates a function called `hello_world` and when we call this function, we end up printing the string "Hello, world!" to the console!
 
 <!-- end_slide -->
 
@@ -173,7 +197,23 @@ python --version
 
 ## For Linux users
 
-You most likely already have Python installed or are capable of figuring this out for yourself
+You most likely already have Python installed or are capable of figuring this out for yourself.
+
+<!-- end_slide -->
+
+# Using the Python interpreter
+
+Before we create our first files, the easiest way to run Python is by running the following command in your terminal.
+
+```bash
+python
+```
+
+Calling `python` opens up the interpreter which allows us to have an immediate feedback loop.
+
+To exit the interpreter, you can type in `exit()` or use `ctrl + d`
+
+**Exercise**: Use the interpreter to print out your name
 
 <!-- end_slide -->
 
@@ -189,51 +229,6 @@ Here are a list of code editors that I would recommend for beginners:
 For those that want a simple setup, VSCode will be enough.
 
 **NOTE**: I do prefer students to use code editors over Jupyter notebooks because you will need to upload actual Python files for your assignments
-
-<!-- end_slide -->
-
-# Using the REPL
-
-Before we create our first files, the easiest way to run Python is by running the following command in your terminal.
-
-```bash
-python
-```
-
-This will open the Python REPL. A REPL, which stands for read-eval-print-loop, is a simple interactive environment
-where user input is read, evaluated, and returned to the user.
-
-It's going to be our quick and dirty way of running things.
-
-![](./python-repl.png)
-
-<!-- end_slide -->
-
-# Running your first Python file
-
-## Git
-
-The source code for this class will be available [on GitHub](https://github.com/ja153903/baruch-mth3300.git).
-
-To download the code, let's first install `git`.
-
-Follow [this link](https://github.com/git-guides/install-git) to setup `git`.
-
-Once this is done, then run the following command:
-
-```bash
-git clone https://github.com/ja153903/baruch-mth3300.git
-```
-
-This will clone the repository on your machine.
-
-Any time an update is made to this repository and you want those updated changes, you'll want to run the following command:
-
-```bash
-git pull
-```
-
-We can talk more about `git` as the semester goes on since you'll eventually have to become quite familiar with it.
 
 <!-- end_slide -->
 
