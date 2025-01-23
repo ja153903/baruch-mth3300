@@ -197,8 +197,10 @@ python --version
 
 ## For Linux users
 
-You most likely already have Python installed or are capable of figuring this out for yourself.
+If you don't have at least Python 3.10 installed on your machine, you can do one of two things:
 
+- Use your distribution's package manager to download the appropriate version
+- You can download the source code from the Python site and build it. [Handy link here if you need it](https://docs.python.org/3/using/unix.html)
 <!-- end_slide -->
 
 # Using the Python interpreter

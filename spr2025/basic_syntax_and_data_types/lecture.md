@@ -45,15 +45,44 @@ name = "john" # we can rename variables as well
 
 ## Best practices for naming variables
 
+- Make sure your variable names denote the variable's intended purpose
+- Variable names should be in snake case, i.e. `name_like_this`
+
 <!-- end_slide -->
 
 # Variables
 
 ## Multiple inline assignments
 
-# Variables
+You can assign values to different variables on the same line.
 
-## 
+```python
+a_number, another_number = 1, 2
+```
+
+## Swapping values between two variables
+
+Suppose that you want to swap the values of two variables.
+
+If you reason it out, you can do the following:
+
+```python
+a, b = 10, 20
+
+temp = a
+a = b
+b = temp
+```
+
+But in Python, we can take advantage of the inline assignment of multiple variables!
+
+```python
+a, b = 10, 20
+
+a, b = b, a
+```
+
+<!-- end_slide -->
 
 # Type conversion
 
@@ -169,4 +198,3 @@ are considered truthy.
 
 # Basic input and output operations
 
-<!-- end_slide -->
