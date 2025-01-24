@@ -177,4 +177,3 @@ Students will learn fundamental programming concepts, problem-solving skills, an
 - "Automate the Boring Stuff with Python" by Al Sweigart
 - Official Python Documentation
 - Online platforms: Leetcode
-
