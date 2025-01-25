@@ -479,6 +479,25 @@ When we run this on the console, we find that this prints out `Hello, Jaime`.
 
 ## `input()`
 
+Suppose now that we want to get user input. Python has an `input()` function that allows us to do this.
+
+```python
+name = input("What is your name?")
+
+print(f"My name is {name}")
+```
+
+The `input()` function returns a value of the type `str`
+
+This means that if we wanted instead to ask the user for a number, we'd have to cast the `str` into an `int` like we've seen before.
+
+```python
+name = input("What is your name?")
+age = int(input("How old are you?"))
+
+print(f"{name} is {age} years old")
+```
+
 <!-- end_slide -->
 
 # Running your first Python file
