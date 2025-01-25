@@ -64,6 +64,8 @@ I just want to state some policies around our problem sets.
 
 <!-- end_slide -->
 
+# Syllabus
+
 ## Textbooks
 
 **There is no official textbook.**
@@ -149,21 +151,11 @@ Python has positioned itself as a great introductory programming language for th
 
 # Introduction to Python
 
-## Hello, World!
-
-Here's our canonical introduction to Python!
-
-```python
-print("Hello, world!")
-```
-
-<!-- end_slide -->
-
-# Installing Python
+## Installing Python
 
 This class requires that we have at least python@3.10
 
-## For MacOS users
+### For MacOS users
 
 If you don't already have Homebrew, please following the instructions on the [site](https://docs.brew.sh/Installation) to install it.
 
@@ -177,7 +169,7 @@ Run the following command to make sure that you've successfully installed the co
 python --version
 ```
 
-## For Windows users
+### For Windows users
 
 Visit the [official download page](https://www.python.org/downloads/) and download Python 3.12
 
@@ -189,7 +181,7 @@ Run the following command to make sure that you've successfully installed the co
 python --version
 ```
 
-## For Linux users
+### For Linux users
 
 If you don't have at least Python 3.10 installed on your machine, you can do one of two things:
 
@@ -197,7 +189,9 @@ If you don't have at least Python 3.10 installed on your machine, you can do one
 - You can download the source code from the Python site and build it. [Handy link here if you need it](https://docs.python.org/3/using/unix.html)
 <!-- end_slide -->
 
-# Using the Python interpreter
+# Introduction to Python
+
+## Using the Python interpreter
 
 Before we create our first files, the easiest way to run Python is by running the following command in your terminal.
 
@@ -210,6 +204,10 @@ Calling `python` opens up the interpreter which allows us to have an immediate f
 To exit the interpreter, you can type in `exit()` or use `ctrl + d`
 
 **Exercise**: Use the interpreter to print out your name
+
+```python
+print("Jaime")
+```
 
 <!-- end_slide -->
 
