@@ -1,6 +1,6 @@
 ---
-title: MTH 3300 Spring 2025
-sub_title: Lecture 1
+title: Lecture 1
+sub_title: MTH 3300 Spr 2025
 author: Jaime Abbariao
 ---
 

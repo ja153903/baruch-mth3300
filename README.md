@@ -56,8 +56,6 @@ Students will learn fundamental programming concepts, problem-solving skills, an
 - Nested loops
 - Iterating through sequences
 
-**Problem Set**: Due 1 week after 2nd lecture
-
 #### Module 3: Data Structures
 
 1. Lists
@@ -82,8 +80,6 @@ Students will learn fundamental programming concepts, problem-solving skills, an
 - Dictionary methods
 - Nested dictionaries
 
-**Problem Set**: Due 1 week after 3rd lecture
-
 #### Module 4: Functions
 
 1. Function Basics
@@ -100,8 +96,6 @@ Students will learn fundamental programming concepts, problem-solving skills, an
 - Variable-length arguments
 - Lambda functions
 - Recursion
-
-**Problem Set**: Due 1 week after 2nd lecture
 
 #### Module 5: File Handling and Exceptions
 
@@ -136,8 +130,6 @@ Students will learn fundamental programming concepts, problem-solving skills, an
 - Abstract classes
 - Encapsulation
 
-**Problem Set**: Due 1 week after 2nd lecture
-
 #### Module 7: Modules and Packages
 
 1. Python Standard Library
@@ -163,8 +155,6 @@ Students will learn fundamental programming concepts, problem-solving skills, an
 
 - Web development with Reflex
 
-**Problem Set**: Due 2 weeks after second lecture (Web Project)
-
 ### Assessment and Grading
 
 - Problem Sets: 50%
@@ -174,6 +164,5 @@ Students will learn fundamental programming concepts, problem-solving skills, an
 ### Recommended Textbooks and Resources
 
 - "Python Crash Course" by Eric Matthes
-- "Automate the Boring Stuff with Python" by Al Sweigart
 - Official Python Documentation
 - Online platforms: Leetcode
