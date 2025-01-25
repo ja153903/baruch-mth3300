@@ -521,8 +521,6 @@ b = int(input("Enter another number: "))
 print(a + b)
 ```
 
-If you're using Visual Studio Code or PyCharm, there should be an option to run your code if you have the appropriate plugins.
-
 If want to run this code in the terminal, run your file with the following command:
 
 ```bash
