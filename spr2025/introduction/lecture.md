@@ -147,6 +147,18 @@ Python has positioned itself as a great introductory programming language for th
 - **Relevance**: Python is widely used in the industry.
 - **Enforces good habits**: Python encourages good programming practices like readability and simplicity
 
+Here's a quick example of what Python code looks like:
+
+```python
+# This code prints the famous "Hello, World!" message
+print("Hello, World!")
+
+# This code calculates the sum of two numbers
+a = 5
+b = 10
+sum = a + b
+print("The sum is:", sum)
+```
 <!-- end_slide -->
 
 # Introduction to Python
