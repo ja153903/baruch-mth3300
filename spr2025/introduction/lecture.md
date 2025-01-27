@@ -24,9 +24,10 @@ author: Jaime Abbariao
 
 ## Course grading
 
-- Problem sets: 50%
+- Problem sets: 40%
+- Final project: 10%
 - Midterm: 25%
-- Final: 25%
+- Final Exam: 25%
 
 If your final exam grade is higher than your midterm exam grade, then I'll substitute your final exam grade for your midterm grade.
 
