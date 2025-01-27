@@ -15,6 +15,10 @@
 
 *Instructor:* Jaime Abbariao, Software Engineer \@ #link("https://figma.com")[Figma]
 
+*Contact*: Feel free to send questions to _jaimeabbariao\@gmail.com_.
+
+*Office hours*: Fridays, 5:30pm - 6:30pm on Zoom
+
 === Course overview
 
 This course is designed to provider undergraduate students with a solid
