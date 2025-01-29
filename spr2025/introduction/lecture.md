@@ -4,14 +4,6 @@ sub_title: MTH 3300 Spr 2025
 author: Jaime Abbariao
 ---
 
-# Self-introductions
-
-- I'm Jaime Abbariao
-- Graduated from Baruch in 2017 and NYU in 2020
-- Currently a software engineer at [Figma](https://www.figma.com)
-
-<!-- end_slide -->
-
 # About this class
 
 - We meet on Tuesday and Thursday at 5:40pm in 6-125
@@ -172,15 +164,52 @@ This class requires that we have at least python@3.10
 
 If you don't already have Homebrew, please following the instructions on the [site](https://docs.brew.sh/Installation) to install it.
 
+In your terminal, run the following command:
+
 ```bash
-brew install python@3.12
+brew update
+brew install pyenv
+```
+
+Then after installing `pyenv`, run the following commands:
+
+```bash
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
+echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
+echo 'eval "$(pyenv init - zsh)"' >> ~/.zshrc
+```
+
+Restart your terminal after this is done.
+
+<!-- end_slide -->
+
+# Introduction to Python
+
+## Installing Python
+
+### For MacOS (continued)
+
+Once this is done, we need to make sure that the following build tools have been installed:
+
+```bash
+xcode-select --install
+brew install openssl readline sqlite3 xz zlib tcl-tk@8
 ```
 
 Run the following command to make sure that you've successfully installed the correct version
 
 ```bash
-python --version
+pyenv install 3.12
+pyenv global 3.12
 ```
+
+Now check if you have the proper installation by running: `python -v`
+
+<!-- end_slide -->
+
+# Introduction to Python
+
+## Installing Python
 
 ### For Windows users
 
@@ -193,6 +222,12 @@ Run the following command to make sure that you've successfully installed the co
 ```bash
 python --version
 ```
+
+<!-- end_slide -->
+
+# Introduction to Python
+
+## Installing Python
 
 ### For Linux users
 
