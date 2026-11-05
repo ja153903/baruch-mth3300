@@ -1,6 +1,9 @@
 [tools]
 uv = "0.13"
 
+[env]
+_.python.venv = ".venv"
+
 [tasks.test]
 description = "Run pytest (pass a path to narrow it)"
 run = "uv run pytest"
