@@ -31,15 +31,15 @@ There are 23 lectures over 14 weeks, with two meetings a week. The other five me
 | 2 | **L3** Strings · **L4** Formatting, input/output, reading tracebacks | f-strings, `f"{x=}"` | `02-strings` | Tutor |
 | 3 | **L5** Functions · **L6** Type hints and tests | `def`, pytest | `03-functions` | Tutor |
 | 4 | **L7** Booleans and conditionals · **L8** Code quality | ruff, ty | `04-conditionals` | Tutor |
-| 5 | **L9** `while` loops · **L10** `for` loops and accumulation | `range`, `enumerate` | `05-loops` | Tutor |
+| 5 | **L9** `while` loops · **L10** `for` loops and accumulation | `range`, `enumerate`, `random` | `05-loops` | Tutor |
 | 6 | **L11** Lists and slicing · **L12** Tuples and comprehensions | `zip(strict=True)` | `06-lists` | Tutor |
 | 7 | **L13** Dicts · **L14** Sets, counting, midterm review | `collections.Counter` | `07-dicts` | Tutor |
 | 8 | **Midterm** · **L15** Files and paths | `pathlib`, `with` | | No AI (midterm) |
 | 9 | **L16** Exceptions and CSV · **L17** Recursion | `try`/`except`, `csv` | `09-files` | Tutor |
 | 10 | **L18** Searching and sorting · **L19** Big-O and profiling | `profiling.sampling` | `10-algorithms` | Pair programmer |
 | 11 | **L20** Dataclasses · **L21** Pattern matching and modeling | `@dataclass`, `match` | `11-dataclasses` | Pair programmer |
-| 12 | **L22** Numbers you can trust · **L23** NumPy and plotting | `decimal`, `fractions`, `random`, `uv add`, marimo | `12-numerics` | Pair programmer |
-| 13 | Project workshop · Project workshop | | `13-numpy` | Pair programmer |
+| 12 | **L22** How data is represented · **L23** Building with AI: spec, tests, generate, review | `ord`/`chr`, UTF-8, `decimal` | `12-representation` | Pair programmer |
+| 13 | Project workshop · Project workshop | | `13-testing` | Pair programmer |
 | 14 | Project demos and oral defenses · Project demos and oral defenses | | | Pair programmer |
 | 15 | **Final exam** | | | No AI |
 
