@@ -1,0 +1,26 @@
+[tools]
+uv = "0.13"
+
+[tasks.test]
+description = "Run pytest (pass a path to narrow it)"
+run = "uv run pytest"
+
+[tasks.collect]
+description = "Check that every test imports"
+run = "uv run pytest --collect-only -q"
+
+[tasks.lint]
+description = "Ruff lint, format check, and ty"
+run = ["uv run ruff check", "uv run ruff format --check", "uv run ty check"]
+
+[tasks.notes]
+description = "Check every lecture notebook"
+run = "uv run marimo check lectures/*/notes.md"
+
+[tasks.edit]
+description = "Open a lecture notebook, e.g. mise run edit lectures/01-setup/notes.md"
+run = "uv run marimo edit"
+
+[tasks.check]
+description = "Everything CI-style: collect, lint, notebooks"
+depends = ["collect", "lint", "notes"]

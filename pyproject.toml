@@ -1,0 +1,30 @@
+[project]
+name = "mth3300"
+version = "0.1.0"
+description = "Course materials for MTH 3300 at Baruch College"
+readme = "README.md"
+authors = [
+    { name = "ja153903", email = "jaimeabbariao@gmail.com" }
+]
+requires-python = ">=3.15"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "marimo>=0.25.2",
+    "matplotlib>=3.11.2",
+    "numpy>=2.5.4",
+    "pytest>=9.2.0",
+    "ruff>=0.17.3",
+    "ty>=0.0.97",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["assignments", "lectures", "practice"]
+
+[tool.ruff]
+target-version = "py315"
+src = [".", "assignments/*", "lectures/*", "practice/*"]

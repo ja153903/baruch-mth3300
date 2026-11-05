@@ -1,0 +1,147 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.25.2",
+    "script_metadata_hash": null
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": "6de1412f3e4f5d861edf97f61a538192",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h1 id=\"l01-setup-and-your-first-program\">L01: Setup and your first program</h1>\n<span class=\"paragraph\"><strong>By the end of this lecture you can:</strong></span>\n<ul>\n<li>install Python with uv and run a program</li>\n<li>use the Python REPL as a calculator</li>\n<li>save your work with git</li>\n<li>ask an AI to explain an error message</li>\n</ul></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "MJUe",
+      "code_hash": "1d0db38904205bec4d6f6f6a1f6cec3e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "vblA",
+      "code_hash": "170af45cb48808a01ff8b2dd8d90868c",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"1-install-uv\">1. Install uv</h2>\n<span class=\"paragraph\">uv installs Python and every library this course needs. You never install Python by hand.</span>\n<div class=\"language-sh codehilite\"><pre><span></span><code><span class=\"c1\"># macOS / Linux</span>\ncurl<span class=\"w\"> </span>-LsSf<span class=\"w\"> </span>https://astral.sh/uv/install.sh<span class=\"w\"> </span><span class=\"p\">|</span><span class=\"w\"> </span>sh\n<span class=\"c1\"># Windows (PowerShell)</span>\npowershell<span class=\"w\"> </span>-ExecutionPolicy<span class=\"w\"> </span>ByPass<span class=\"w\"> </span>-c<span class=\"w\"> </span><span class=\"s2\">\"irm https://astral.sh/uv/install.ps1 | iex\"</span>\n</code></pre></div>\n<span class=\"paragraph\">Then check that it works:</span>\n<div class=\"language-sh codehilite\"><pre><span></span><code>uv<span class=\"w\"> </span>--version\nuv<span class=\"w\"> </span>run<span class=\"w\"> </span>python<span class=\"w\"> </span>--version<span class=\"w\">   </span><span class=\"c1\"># downloads Python 3.15 the first time</span>\n</code></pre></div>\n<h2 id=\"2-the-repl\">2. The REPL</h2>\n<span class=\"paragraph\"><code>uv run python</code> starts the <strong>REPL</strong> (Read\u2013Eval\u2013Print Loop). You type an expression and Python prints its value. Type <code>exit</code> to leave.</span>\n<span class=\"paragraph\"><strong>Predict:</strong> what does each line below print?</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "bkHC",
+      "code_hash": "e294388f3946cb4cfd6a1c1ed71b3548",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "14\n20\n3.5\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "lEQa",
+      "code_hash": "b68b7a987363c08f8b6a7db19edf833c",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"3-your-first-program\">3. Your first program</h2>\n<span class=\"paragraph\">A program is a file of instructions that Python runs from top to bottom. Save this as <code>hello.py</code>, then run <code>uv run python hello.py</code>.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "PKri",
+      "code_hash": "32dfd4dff81cd82815fad3d548dca383",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Hello, MTH 3300\nPython can do arithmetic: 1024\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "Xref",
+      "code_hash": "37ecaf39bde7f1f79d01732357ac8ce9",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"4-saving-your-work-with-git\">4. Saving your work with git</h2>\n<span class=\"paragraph\">git records snapshots of your files. You'll use four commands all semester:</span>\n<div class=\"language-sh codehilite\"><pre><span></span><code>git<span class=\"w\"> </span>clone<span class=\"w\"> </span>&lt;url&gt;<span class=\"w\">          </span><span class=\"c1\"># copy an assignment repo to your computer</span>\ngit<span class=\"w\"> </span>add<span class=\"w\"> </span>hw01.py<span class=\"w\">          </span><span class=\"c1\"># choose what goes into the snapshot</span>\ngit<span class=\"w\"> </span>commit<span class=\"w\"> </span>-m<span class=\"w\"> </span><span class=\"s2\">\"Finish task 1\"</span>\ngit<span class=\"w\"> </span>push<span class=\"w\">                 </span><span class=\"c1\"># upload it; this is how you submit</span>\n</code></pre></div>\n<h2 id=\"5-when-things-go-wrong\">5. When things go wrong</h2>\n<span class=\"paragraph\">Errors are normal. Python tells you <strong>where</strong> the error happened and <strong>what kind</strong> it is. Read the <em>last line</em> first.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "SFPL",
+      "code_hash": "a4ad2d7a4d0ef9063109e4f02d6daeb1",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "TypeError: can only concatenate str (not \"int\") to str\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "BYtC",
+      "code_hash": "23f3f4994033596095992c303ba06673",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"ai-activity-your-first-conversation\">AI activity: your first conversation</h2>\n<ol>\n<li>In the REPL, run <code>print(\"Total: \" + 5)</code> and copy the full error.</li>\n<li>Ask an AI: <em>\"I'm a beginner. Explain this Python error in plain English, but don't fix my code: \u2026\"</em></li>\n<li>Fix it yourself. Write one sentence in your own words about what went wrong.</li>\n</ol>\n<span class=\"paragraph\"><strong>Exercises:</strong> open <code>l01_exercises.py</code>, then run <code>uv run pytest lectures/01-setup</code>.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    }
+  ]
+}
