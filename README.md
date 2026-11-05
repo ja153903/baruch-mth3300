@@ -11,7 +11,6 @@ Course materials for MTH 3300 at Baruch College, written for Python 3.15.
 | [`project/`](project) | the final project spec, options, and rubric |
 | [`exams/`](exams) | practice midterm and final |
 | [`docs/`](docs) | student guides: setup, using AI |
-| `instructor/` | quizzes and oral-defense questions (**not for students**) |
 
 ## Setup
 

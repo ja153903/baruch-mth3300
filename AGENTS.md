@@ -17,7 +17,6 @@ Instructor repo for an intro Python course at Baruch College. Students are begin
 - `project/`: the final project spec, options, and rubric.
 - `exams/`: student-facing practice exams, with answers in `<details>` blocks.
 - `docs/`: student guides (setup, using AI).
-- `instructor/`: quizzes, live-coding prompts, and oral-defense questions. **Never publish this folder.**
 - Solutions never go in this repo.
 
 ## Conventions
