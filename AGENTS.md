@@ -7,7 +7,7 @@ Instructor repo for an intro Python course at Baruch College. Students are begin
 - `lectures/NN-topic/`: one folder per lecture, L01–L23.
   - `notes.md` is a marimo notebook in Markdown format. Code cells are fenced ```` ```python {.marimo} ````, and each file needs one `import marimo as mo` cell. A variable can be defined in only one cell; use an `_` prefix for cell-local names. Notes that write files must use a temp directory.
   - `lNN_exercises.py` and `test_lNN_exercises.py`: in-class exercises.
-- `assignments/NN-name/`: the homework for week NN (none for exam weeks). Each one becomes its own student repo (via GitHub Classroom), so it must stand alone, with its own `pyproject.toml`, `uv.lock`, `.python-version`, `AI_LOG.md`, and `.github/workflows/autograde.yml`. It contains:
+- `assignments/NN-name/`: the homework for week NN (none for exam weeks). Each one becomes its own student repo, so it must stand alone, with its own `pyproject.toml`, `uv.lock`, `.python-version`, `AI_LOG.md`, and `.github/workflows/autograde.yml`. It contains:
   - `README.md`: the problem statement and AI policy
   - `hwNN.py`: the starter code, with `raise NotImplementedError` stubs
   - `test_hwNN.py`: pytest tests that define "done"

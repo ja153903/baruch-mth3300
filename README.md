@@ -54,7 +54,7 @@ uv run pytest lectures/01-setup
 
 Failing tests are normal until you finish. A test passes when your code is done.
 
-**5. Do the homework in its own repo.** Each week you'll get a GitHub Classroom link. Accept it, clone the repo it creates, and follow that repo's `README.md`. To submit, commit and push:
+**5. Do the homework in its own repo.** Each week your instructor will tell you how to get that week's homework repo. Clone it, and follow its `README.md`. To submit, commit and push:
 
 ```sh
 git add -A
