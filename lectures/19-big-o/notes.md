@@ -69,11 +69,20 @@ print(f"set:  {timed(lambda: 999_999 in big_set):.6f}s")
 
 ## 4. Profiling: where does the time go?
 
-Python 3.15 ships with a **sampling profiler**. It checks what your program is doing thousands of times a second, and reports which functions it was in.
+Python 3.15 ships with two profilers. The **tracing profiler** records every function call, and it works on every computer:
+
+```sh
+uv run python -m profiling.tracing slow_program.py
+```
+
+The **sampling profiler** checks what your program is doing thousands of times a second, and reports which functions it was in. It slows your program down much less, and it can draw a flame graph that you open in a browser. The widest bars are where the time goes.
 
 ```sh
 uv run python -m profiling.sampling run slow_program.py
+uv run python -m profiling.sampling run --flamegraph -o profile.html slow_program.py
 ```
+
+On macOS, the sampling profiler may stop with a permission error. If it does, use the tracing profiler instead.
 
 Optimize the part the profiler points to, not the part you *think* is slow.
 

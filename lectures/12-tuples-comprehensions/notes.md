@@ -10,6 +10,7 @@ marimo-version: "0.25.2"
 - use tuples and unpacking
 - walk through two lists together with `zip`
 - write list comprehensions, including Python 3.15's unpacking form
+- walk through neighbors and chunks with `itertools`
 
 ```python {.marimo hide_code="true"}
 import marimo as mo
@@ -69,6 +70,25 @@ Before 3.15, you had to write `[x for row in rows for x in row]`.
 ```python {.marimo}
 print({t: n for t, n in zip(tickers, shares)})
 print({len(t) for t in tickers})
+```
+
+## 6. Neighbors and chunks with `itertools`
+
+`pairwise` gives each item with the one after it, which is exactly what a period return needs:
+
+```python {.marimo}
+from itertools import batched, pairwise
+
+_prices = [100.0, 110.0, 99.0]
+print([round(b / a - 1, 3) for a, b in pairwise(_prices)])
+```
+
+`batched` splits a sequence into tuples of a fixed size.
+
+**Predict:** three tickers, in batches of two. What's in the last batch?
+
+```python {.marimo}
+print(list(batched(tickers, 2)))
 ```
 
 ## AI activity

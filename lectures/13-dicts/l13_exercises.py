@@ -6,3 +6,10 @@ def letter_frequencies(text: str) -> dict[str, int]:
 def order_total(menu: dict[str, float], order: list[str]) -> float:
     """Sum the prices of the items ordered. Items that aren't on the menu cost 0."""
     raise NotImplementedError
+
+
+def count_allocations(
+    portfolios: list[dict[str, float]],
+) -> dict[frozendict[str, float], int]:
+    """Count how many times each portfolio appears. Use frozendict(portfolio) as the key."""
+    raise NotImplementedError

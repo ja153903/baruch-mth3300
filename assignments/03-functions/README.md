@@ -16,6 +16,7 @@ Implement each function in `hw03.py`:
 def double(x):
     print(x * 2)
 
+
 result = double(4)
 print(result)
 ```

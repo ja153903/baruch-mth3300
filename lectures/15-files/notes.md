@@ -36,6 +36,8 @@ print(notes_file.read_text())
 print(notes_file.exists())
 ```
 
+Files store bytes, and an **encoding** says how text becomes bytes. Since Python 3.15, the default is UTF-8 on every operating system, so this code behaves the same on macOS, Windows, and Linux. L22 covers encodings in detail.
+
 ## 3. `with open(...)`: line by line
 
 `with` closes the file for you, even if an error happens partway through.
@@ -65,6 +67,18 @@ Mode `"w"` **replaces** the file's contents, and `"a"` **appends** to it.
 ```python {.marimo}
 print(sorted(p.name for p in workdir.glob("*.txt")))
 ```
+
+## 6. Copying and moving files
+
+```python {.marimo}
+_draft = workdir / "draft.md"
+_draft.write_text("version 1\n")
+_backup = _draft.copy(workdir / "draft.bak")
+_archived = _backup.move(workdir / "archive.bak")
+print(_draft.exists(), _backup.exists(), _archived.exists())
+```
+
+**Predict:** which of the three files exists at the end?
 
 ## AI activity
 

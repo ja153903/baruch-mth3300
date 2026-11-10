@@ -75,6 +75,17 @@ Read it **bottom up**:
 2. **The line above it:** which line of your code, with `~~~^~~~` pointing at the exact part.
 3. **Ask yourself:** what type does `bill` hold? (It's a string, straight from `input`.)
 
+## 6. Python suggests fixes for typos
+
+Modern Python checks whether you misspelled a name, and says so on the last line:
+
+```text
+NameError: name 'prnit' is not defined. Did you mean: 'print'?
+AttributeError: 'str' object has no attribute 'uper'. Did you mean '.upper' instead of '.uper'?
+```
+
+Read the suggestion before you ask anyone else, including an AI. It's a guess, so check that it's what you meant.
+
 ## AI activity
 
 Write a three-line program that asks for a bill amount and prints a 20% tip, then run it. If it crashes, paste the traceback into an AI and ask it to explain each line of the traceback, **not** to fix your code.

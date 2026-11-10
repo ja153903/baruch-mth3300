@@ -222,7 +222,7 @@ for _ch in ["A", "é", "€", "🐍"]:
     print(f"{_ch}  code point {ord(_ch):>6}  {len(_encoded)} bytes: {_encoded}")
 ```
 
-`len` counts code points, not bytes. That's why L15 used `read_text(encoding="utf-8")`: the same bytes mean different text in another encoding.
+`len` counts code points, not bytes. The same bytes mean different text in another encoding. Since Python 3.15, UTF-8 is the default, which is why L15 could call `read_text()` without naming an encoding.
 
 ### Two strings that look the same
 

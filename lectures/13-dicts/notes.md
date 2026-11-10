@@ -24,7 +24,7 @@ portfolio["AAPL"] += 2  # update a value
 print(portfolio, portfolio["MSFT"], "TSLA" in portfolio)
 ```
 
-Keys must be **immutable**: strings, numbers, or tuples. Looking up a missing key raises `KeyError`.
+Keys must be **immutable**: strings, numbers, tuples, or the `frozendict` in section 6. Looking up a missing key raises `KeyError`.
 
 ## 2. `.get` with a default
 
@@ -60,6 +60,24 @@ print(letter_counts("mississippi"))
 prices = {"AAPL": 190.5, "MSFT": 410.25, "NVDA": 120.0}
 value = sum(n * prices[t] for t, n in portfolio.items())
 print(f"Portfolio value: ${value:,.2f}")
+```
+
+## 6. New in Python 3.15: `frozendict`
+
+A `frozendict` is a dict that can't change after it's created. Because it can't change, it can be a key in another dict.
+
+```python {.marimo}
+_weights = frozendict(tech=0.6, energy=0.4)
+_labels = {_weights: "aggressive"}
+print(_labels[frozendict(energy=0.4, tech=0.6)])
+```
+
+**Predict:** the two `frozendict`s above list their keys in different orders, yet the lookup works. Why?
+
+**Predict, then try it in the REPL:** does this work? Read the error if it doesn't.
+
+```python
+{frozendict(a=[1, 2]): "x"}
 ```
 
 ## AI activity

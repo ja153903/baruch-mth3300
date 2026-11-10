@@ -29,15 +29,15 @@ There are 23 lectures over 14 weeks, with two meetings a week. The other five me
 | Wk | Lectures | Modern Python / tooling | Homework assigned | AI tier |
 |---|---|---|---|---|
 | 1 | **L1** Setup and your first program · **L2** Values, types, expressions | uv, the 3.15 REPL, git | `01-basics` | Tutor |
-| 2 | **L3** Strings · **L4** Formatting, input/output, reading tracebacks | f-strings, `f"{x=}"` | `02-strings` | Tutor |
+| 2 | **L3** Strings · **L4** Formatting, input/output, reading tracebacks | f-strings, `f"{x=}"`, "Did you mean" errors | `02-strings` | Tutor |
 | 3 | **L5** Functions · **L6** Type hints and tests | `def`, pytest | `03-functions` | Tutor |
 | 4 | **L7** Booleans and conditionals · **L8** Code quality | ruff, ty | `04-conditionals` | Tutor |
 | 5 | **L9** `while` loops · **L10** `for` loops and accumulation | `range`, `enumerate`, `random` | `05-loops` | Tutor |
-| 6 | **L11** Lists and slicing · **L12** Tuples and comprehensions | `zip(strict=True)` | `06-lists` | Tutor |
-| 7 | **L13** Dicts · **L14** Sets, counting, midterm review | `collections.Counter` | `07-dicts` | Tutor |
-| 8 | **Midterm** · **L15** Files and paths | `pathlib`, `with` | | No AI (midterm) |
-| 9 | **L16** Exceptions and CSV · **L17** Recursion | `try`/`except`, `csv` | `09-files` | Tutor |
-| 10 | **L18** Searching and sorting · **L19** Big-O and profiling | `profiling.sampling` | `10-algorithms` | Pair programmer |
+| 6 | **L11** Lists and slicing · **L12** Tuples and comprehensions | `zip(strict=True)`, comprehension unpacking, `itertools.pairwise` and `batched` | `06-lists` | Tutor |
+| 7 | **L13** Dicts · **L14** Sets, counting, midterm review | `collections.Counter`, `frozendict` | `07-dicts` | Tutor |
+| 8 | **Midterm** · **L15** Files and paths | `pathlib`, `with`, UTF-8 by default | | No AI (midterm) |
+| 9 | **L16** Exceptions and CSV · **L17** Recursion | `try`/`except`, `except A, B`, `csv` | `09-files` | Tutor |
+| 10 | **L18** Searching and sorting · **L19** Big-O and profiling | `profiling.tracing`, `profiling.sampling` | `10-algorithms` | Pair programmer |
 | 11 | **L20** Dataclasses · **L21** Pattern matching and modeling | `@dataclass`, `match` | `11-dataclasses` | Pair programmer |
 | 12 | **L22** How data is represented · **L23** Building with AI: spec, tests, generate, review | `ord`/`chr`, UTF-8, `decimal` | `12-representation` | Pair programmer |
 | 13 | Project workshop · Project workshop | | `13-testing` | Pair programmer |

@@ -1,6 +1,6 @@
 import pytest
 
-from l12_exercises import flatten, pairwise_sums
+from l12_exercises import flatten, in_batches, pairwise_sums, period_returns
 
 
 def test_pairwise_sums():
@@ -13,3 +13,15 @@ def test_pairwise_sums():
 def test_flatten():
     assert flatten([[1, 2], [3], [], [4, 5]]) == [1, 2, 3, 4, 5]
     assert flatten([]) == []
+
+
+def test_period_returns():
+    assert period_returns([100.0, 110.0, 99.0]) == pytest.approx([0.1, -0.1])
+    assert period_returns([100.0]) == []
+    assert period_returns([]) == []
+
+
+def test_in_batches():
+    assert in_batches(["AAPL", "MSFT", "NVDA"], 2) == [["AAPL", "MSFT"], ["NVDA"]]
+    assert in_batches(["AAPL", "MSFT"], 2) == [["AAPL", "MSFT"]]
+    assert in_batches([], 2) == []
