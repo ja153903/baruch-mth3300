@@ -12,6 +12,8 @@ Implement each function in `hw09.py`:
 
 **Try it:** the tests create temporary files with pytest's `tmp_path`. Read `test_hw09.py` to see how.
 
+**AI exercise:** once all tests pass, predict what your `column_total` does if a cell in the column is blank, and if the column name doesn't exist. Then ask an AI what your function does in those two cases, and test both on a small CSV file of your own. In `AI_LOG.md`, record your prediction, the AI's answer, and what actually happened.
+
 ## Check your work
 
 ```sh

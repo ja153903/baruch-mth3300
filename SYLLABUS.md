@@ -18,7 +18,8 @@
 | **AI as pair programmer** | AI may write code, but you must understand and defend every line | Homework 10–13, final project |
 
 - **Log your AI use.** For every homework, record your AI sessions in `AI_LOG.md`: what you asked, and what you changed afterwards. Logged AI use is never penalized. Unlogged use is an academic integrity issue.
-- **Free tools only.** Nothing in this course requires a paid AI subscription.
+- **Possible sanctions.** Using AI beyond what a tier allows, or not logging it, is handled under the CUNY Policy on Academic Integrity. Possible sanctions include a zero on the work, a lower course grade, and a report to the college's academic integrity officer.
+- **Free tools only.** Nothing in this course requires a paid AI subscription. Microsoft Copilot Chat, free through CUNY, is the course default. OpenCode's free models are recommended from homework 10 on. See [`docs/using-ai.md`](docs/using-ai.md).
 - **Each assignment folder has AI instructions.** The `AGENTS.md` and `CLAUDE.md` files tell AI coding tools how to help at that assignment's tier.
 
 ## Schedule

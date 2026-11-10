@@ -10,6 +10,18 @@ Implement each function in `hw03.py`:
 2. `is_leap_year(year)`: return `True` if `year` is a leap year. A year is a leap year if it's divisible by 4, except years divisible by 100, unless they're also divisible by 400.
 3. `digit_sum(n)`: return the sum of the digits of a non-negative integer `n`. For example, `digit_sum(3300) == 6`.
 
+**AI exercise:** before you run this code, write down exactly what you predict it will print:
+
+```python
+def double(x):
+    print(x * 2)
+
+result = double(4)
+print(result)
+```
+
+Then run it, and ask an AI to explain anything you got wrong. In `AI_LOG.md`, write one sentence, in your own words, about the difference between `print` and `return`.
+
 ## Check your work
 
 ```sh
