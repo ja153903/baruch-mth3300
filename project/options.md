@@ -31,3 +31,10 @@ Each option has a **core** that's required and **extensions** you can add for de
 - **Core:** read a roster and scores from CSV, apply weighted categories and drop the lowest score, then output letter grades and per-assignment statistics.
 - **Extensions:** "what score do I need on the final?"; detect outliers; a histogram of grades.
 - **Lectures used:** L13 (dicts), L16 (CSV), L20–L21 (modeling).
+
+## 6. Agent toolkit
+
+- **Core:** pick a domain from options 1–5 and build it as tools for an AI. Write the core functions in Python with tests, expose them through an MCP server, and write one skill that tells the AI when and how to use them. Demo it working in **two** different AI tools, for example Copilot and OpenCode.
+- **Extensions:** a skill with its own script; a second skill that chains tools together; package everything as a plugin for one tool, and explain in your README what doesn't carry over to the other.
+- **Lectures used:** L08–L16 (skills), L20 (MCP and dataclasses), L23 (portable workflows).
+- **In the defense:** expect to explain why the AI chose your tool, what the type hints tell it, and what happens when it passes bad input.

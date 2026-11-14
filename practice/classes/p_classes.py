@@ -1,9 +1,12 @@
 from dataclasses import dataclass, field
 
 
-@dataclass
 class Stack:
-    items: list[int] = field(default_factory=list)
+    """Write this class by hand: no @dataclass."""
+
+    def __init__(self) -> None:
+        """Start with no items."""
+        raise NotImplementedError
 
     def push(self, x: int) -> None:
         raise NotImplementedError

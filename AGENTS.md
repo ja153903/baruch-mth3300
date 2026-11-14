@@ -1,5 +1,19 @@
 # MTH 3300 course materials
 
+## If you're helping a student
+
+Students work in their own fork of this repo. If you're helping a student with homework or an exercise, these rules override everything after this section:
+
+- **`assignments/01-*` through `assignments/09-*`, and all `lectures/*/lNN_exercises.py`: tutor only.** Explain, give hints, and explain errors, but don't write or edit the student's solution code.
+- **`assignments/10-*` through `assignments/13-*`: pair programmer.** You may write code with the student, in small steps they can explain.
+- Each assignment folder has its own `AGENTS.md` with the full rules for that assignment. Read it before helping.
+- Never edit test files or the course's `AGENTS.md` and `CLAUDE.md` files.
+- Students build their own skills (in `.agents/skills/` and `.github/skills/`) and MCP servers during the course. Treat that work like homework: tutor only through week 9, pair programmer from week 10 on. Ask the student which week it is if you can't tell.
+
+The rest of this file is for the instructor maintaining the course materials.
+
+## About this repo
+
 Instructor repo for an intro Python course at Baruch College. Students are beginners, mostly math and finance majors. The week-by-week plan (23 lectures, AI tiers, grading) is in `SYLLABUS.md`.
 
 ## Layout
@@ -7,17 +21,18 @@ Instructor repo for an intro Python course at Baruch College. Students are begin
 - `lectures/NN-topic/`: one folder per lecture, L01–L23.
   - `notes.md` is a marimo notebook in Markdown format. Code cells are fenced ```` ```python {.marimo} ````, and each file needs one `import marimo as mo` cell. A variable can be defined in only one cell; use an `_` prefix for cell-local names. Notes that write files must use a temp directory.
   - `lNN_exercises.py` and `test_lNN_exercises.py`: in-class exercises.
-- `assignments/NN-name/`: the homework for week NN (none for exam weeks). Each one becomes its own student repo, so it must stand alone, with its own `pyproject.toml`, `uv.lock`, `.python-version`, `AI_LOG.md`, and `.github/workflows/autograde.yml`. It contains:
+- `assignments/NN-name/`: the homework for week NN (none for exam weeks). Students do it in their fork of this repo and submit by pushing; `instructor/grade.py` runs the tests on each fork. Each folder keeps its own `pyproject.toml`, `uv.lock`, `.python-version`, and `AI_LOG.md`, so it still runs on its own. It contains:
   - `README.md`: the problem statement and AI policy
   - `hwNN.py`: the starter code, with `raise NotImplementedError` stubs
   - `test_hwNN.py`: pytest tests that define "done"
-  - `AGENTS.md` and `CLAUDE.md`: **student-facing AI instructions**, in tutor mode for weeks 1–9 and pair-programmer mode for weeks 10–13. They tell the student's AI how to behave and do NOT apply to you when you are editing this repo as the instructor.
+  - `AGENTS.md` and `CLAUDE.md`: **student-facing AI instructions**, in tutor mode for weeks 1–9 and pair-programmer mode for weeks 10–13. They tell the student's AI how to behave. They don't apply when the instructor is editing course materials.
   - To add an assignment, copy an existing folder with the same AI tier, rename `hwNN` throughout, and run `uv lock` inside it.
 - `practice/<topic>/`: ungraded problems (`p_<topic>.py` and its tests) for exam prep.
 - `project/`: the final project spec, options, and rubric.
 - `exams/`: student-facing practice exams, with answers in `<details>` blocks.
 - `docs/`: student guides (setup, using AI).
-- `instructor/`: quizzes, live-coding prompts, and oral-defense questions. **Gitignored; never commit or publish it.**
+- `.agents/skills/` and `.github/skills/`: course-provided Agent Skills, in two copies because OpenCode and Copilot read different folders. The copies must match; `lectures/08-code-quality/test_skills_format.py` checks this.
+- `instructor/`: quizzes, coding-question prompts, oral-defense questions, the AI build session, and the grading script. **Gitignored; never commit or publish it.**
 - Solutions never go in this repo.
 
 ## Conventions

@@ -52,6 +52,27 @@ finally:
 
 # A5
 print(0.1 * 3 == 0.3, round(0.1 * 3, 10) == 0.3)
+
+
+# A6
+class Position:
+    def __init__(self, ticker, shares):
+        self.ticker = ticker
+        self.shares = shares
+
+    def describe(self):
+        return f"{self.shares} {self.ticker}"
+
+
+class ShortPosition(Position):
+    def describe(self):
+        return "short " + super().describe()
+
+
+a = ShortPosition("TSLA", 5)
+b = a
+b.shares = 8
+print(a.describe(), isinstance(a, Position), a == ShortPosition("TSLA", 8))
 ```
 
 ## Part B: complexity (5 points each)
@@ -68,7 +89,7 @@ What's the Big-O running time of each, in terms of `n = len(xs)`?
 
 **C1.** Write a recursive `count_down(n: int) -> list[int]`. For example, `count_down(3)` is `[3, 2, 1, 0]`.
 
-**C2.** Write a dataclass `Account` with `owner: str` and `balance: float = 0.0`, and a method `withdraw(amount)` that raises `ValueError` if `amount` is more than the balance.
+**C2.** Write a class `Account` by hand (no `@dataclass`). `Account(owner, balance=0.0)` stores both values, and `withdraw(amount)` raises `ValueError` if `amount` is more than the balance. Then write a subclass `OverdraftAccount` whose `withdraw` allows the balance to go down to `-100`.
 
 **C3.** Write `total_by_ticker(path) -> dict[str, float]` for a CSV with columns `ticker,shares,price`. It returns the total value (shares × price) for each ticker, and skips rows with bad numbers.
 
@@ -80,5 +101,6 @@ What's the Big-O running time of each, in terms of `n = len(xs)`?
 - **A3:** `empty one: 7 pair: 5 other`. (`"hi"` doesn't match `(a, b)`, because sequence patterns never match strings.)
 - **A4:** `bad`, then `done`
 - **A5:** `False True`
+- **A6:** `short 8 TSLA True False`. (`b` and `a` are the same object, and a class without `__eq__` is only equal to itself.)
 - **B:** O(n), O(1) on average, O(log n), O(n²), O(n log n)
 </details>

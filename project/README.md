@@ -1,6 +1,6 @@
 # Final project
 
-**Weight:** 20% of your grade · **AI policy: AI as pair programmer** · **Work alone**
+**Weight:** 15% of your grade · **AI policy: AI as pair programmer** · **Work alone**
 
 You'll build a small but real Python program, using AI as a pair programmer, and then **defend it orally**: you'll explain any line of your code we point to. The defense is where most of the grade comes from.
 

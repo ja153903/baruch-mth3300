@@ -7,7 +7,9 @@ authors = [
     { name = "ja153903", email = "jaimeabbariao@gmail.com" }
 ]
 requires-python = ">=3.15"
-dependencies = []
+dependencies = [
+    "mcp>=2.3",
+]
 
 [dependency-groups]
 dev = [
