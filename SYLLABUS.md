@@ -89,6 +89,18 @@ Most classes start with a 10-minute quiz on the previous lecture: no AI, no note
 
 Your lowest three quiz scores are dropped.
 
+### Midterm and final exam
+
+Both exams are on paper, with no AI, no notes, and no computer. They have the same three parts as the quizzes, with more questions:
+
+| Part | Midterm (75 min, L01–L14) | Final (110 min, cumulative, weighted toward L15–L23) |
+|---|---|---|
+| **Tracing:** say what the code prints | 30 points | 25 points |
+| **Debugging:** give an input that shows the bug, fix it, and write an `assert` that catches it | 30 points | 30 points |
+| **Programming:** write functions or classes by hand | 40 points | 45 points |
+
+Some final exam questions also ask for the Big-O of the code. As on quizzes, small syntax slips don't cost points. [`exams/`](exams) has a practice midterm and final in this format.
+
 ### AI build session
 
 In week 13 (workshop 1), you get a small programming task at the start of class and 40 minutes to build it with AI as a pair programmer. Submit two things: your code, and the full transcript of your AI conversations.

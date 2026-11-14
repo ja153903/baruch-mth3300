@@ -1,8 +1,8 @@
 # Practice final
 
-**No AI, no notes, no computer.** Cumulative, but weighted toward L15–L23. Give yourself 110 minutes.
+**No AI, no notes, no computer.** Cumulative, but weighted toward L15–L23. Give yourself 110 minutes. 100 points.
 
-## Part A: predict the output (4 points each)
+## Part A: predict the output (5 points each)
 
 ```python
 # A1
@@ -14,20 +14,8 @@ def g(n):
 
 print([g(k) for k in range(7)])
 
+
 # A2
-from dataclasses import dataclass
-
-
-@dataclass
-class P:
-    x: int
-    y: int = 0
-
-
-print(P(1), P(1) == P(1, 0))
-
-
-# A3
 def classify(v):
     match v:
         case []:
@@ -42,7 +30,7 @@ def classify(v):
 
 print(classify([]), classify([7]), classify((2, 3)), classify("hi"))
 
-# A4
+# A3
 try:
     print(int("3.5"))
 except ValueError:
@@ -50,11 +38,11 @@ except ValueError:
 finally:
     print("done")
 
-# A5
+# A4
 print(0.1 * 3 == 0.3, round(0.1 * 3, 10) == 0.3)
 
 
-# A6
+# A5
 class Position:
     def __init__(self, ticker, shares):
         self.ticker = ticker
@@ -75,32 +63,67 @@ b.shares = 8
 print(a.describe(), isinstance(a, Position), a == ShortPosition("TSLA", 8))
 ```
 
-## Part B: complexity (5 points each)
+## Part B: find the bug (10 points each)
 
-What's the Big-O running time of each, in terms of `n = len(xs)`?
+```python
+# B1: should return the sum of the digits of n, for n >= 0
+def digit_sum(n):
+    if n < 10:
+        return 0
+    return n % 10 + digit_sum(n // 10)
 
-1. `x in xs`, when `xs` is a list
-2. `x in s`, when `s` is a set
-3. Binary search on a sorted list
-4. Two nested loops over `xs`
-5. `sorted(xs)`
+
+# B2: should return the index of target in the sorted list xs, or -1
+def binary_search(xs, target):
+    lo, hi = 0, len(xs) - 1
+    while lo < hi:
+        mid = (lo + hi) // 2
+        if xs[mid] == target:
+            return mid
+        if xs[mid] < target:
+            lo = mid + 1
+        else:
+            hi = mid - 1
+    return -1
+
+
+# B3: lines come from a file. Should return the average of the lines that
+# are numbers, skipping the rest. Assume at least one line is a number.
+def average(lines):
+    total = 0.0
+    count = 0
+    for line in lines:
+        count += 1
+        try:
+            total += float(line)
+        except ValueError:
+            pass
+    return total / count
+```
+
+For each one: give an input that shows the bug, write the fixed code, and write one `assert` that fails on the buggy code and passes on your fix. For B2, also give the Big-O of the fixed version.
 
 ## Part C: write code (15 points each)
 
-**C1.** Write a recursive `count_down(n: int) -> list[int]`. For example, `count_down(3)` is `[3, 2, 1, 0]`.
+Graded on correct logic and handling the example. Small syntax slips, like a missing colon, don't cost points.
+
+**C1.** Write a recursive `count_down(n: int) -> list[int]`. For example, `count_down(3)` is `[3, 2, 1, 0]`. How many calls does `count_down(n)` make in total?
 
 **C2.** Write a class `Account` by hand (no `@dataclass`). `Account(owner, balance=0.0)` stores both values, and `withdraw(amount)` raises `ValueError` if `amount` is more than the balance. Then write a subclass `OverdraftAccount` whose `withdraw` allows the balance to go down to `-100`.
 
-**C3.** Write `total_by_ticker(path) -> dict[str, float]` for a CSV with columns `ticker,shares,price`. It returns the total value (shares × price) for each ticker, and skips rows with bad numbers.
+**C3.** Write `total_by_ticker(path) -> dict[str, float]` for a CSV with columns `ticker,shares,price`. It returns the total value (shares × price) for each ticker, and skips rows with bad numbers. What's its Big-O in the number of rows?
 
 <details>
 <summary>Answers</summary>
 
 - **A1:** `[0, 1, 1, 2, 3, 5, 8]`
-- **A2:** `P(x=1, y=0) True`
-- **A3:** `empty one: 7 pair: 5 other`. (`"hi"` doesn't match `(a, b)`, because sequence patterns never match strings.)
-- **A4:** `bad`, then `done`
-- **A5:** `False True`
-- **A6:** `short 8 TSLA True False`. (`b` and `a` are the same object, and a class without `__eq__` is only equal to itself.)
-- **B:** O(n), O(1) on average, O(log n), O(n²), O(n log n)
+- **A2:** `empty one: 7 pair: 5 other`. (`"hi"` doesn't match `(a, b)`, because sequence patterns never match strings.)
+- **A3:** `bad`, then `done`
+- **A4:** `False True`
+- **A5:** `short 8 TSLA True False`. (`b` and `a` are the same object, and a class without `__eq__` is only equal to itself.)
+- **B1:** the base case returns 0 instead of `n`, so the first digit is lost: `digit_sum(123)` gives 5. Fix: `return n`. Assert: `assert digit_sum(123) == 6`
+- **B2:** `lo < hi` stops before checking the last remaining item, so `binary_search([5], 5)` gives -1. Fix: `while lo <= hi:`. Assert: `assert binary_search([5], 5) == 0`. Big-O: O(log n).
+- **B3:** `count += 1` runs for bad lines too, so `["2", "abc", "4"]` gives 2.0. Fix: move `count += 1` into the `try`, after the `float` line. Assert: `assert average(["2", "abc", "4"]) == 3.0`
+- **C1:** `count_down(n)` makes n + 1 calls.
+- **C3:** O(n), one pass over the rows.
 </details>

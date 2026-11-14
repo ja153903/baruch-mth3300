@@ -1,8 +1,8 @@
 # Practice midterm
 
-**No AI, no notes, no computer.** Covers L01–L14. Give yourself 75 minutes.
+**No AI, no notes, no computer.** Covers L01–L14. Give yourself 75 minutes. 100 points.
 
-## Part A: predict the output (4 points each)
+## Part A: predict the output (5 points each)
 
 ```python
 # A1
@@ -57,11 +57,23 @@ def count_vowels(text):
         if ch in "aeiou":
             count + 1
     return count
+
+
+# B3: should map each word to how many times it appears
+def word_counts(words):
+    counts = {}
+    for w in words:
+        if w in counts:
+            counts[w] += 1
+        counts[w] = 1
+    return counts
 ```
 
-For each one: give an input that shows the bug, and write the fixed code.
+For each one: give an input that shows the bug, write the fixed code, and write one `assert` that fails on the buggy code and passes on your fix.
 
-## Part C: write code (16 points each)
+## Part C: write code (20 points each)
+
+Graded on correct logic and handling the example. Small syntax slips, like a missing colon, don't cost points.
 
 **C1.** Write `running_max(xs: list[int]) -> list[int]`, which returns the largest value seen so far at each position. For example, `running_max([3, 1, 4, 1, 5])` is `[3, 3, 4, 4, 5]`.
 
@@ -76,6 +88,7 @@ For each one: give an input that shows the bug, and write the fixed code.
 - **A4:** `6`, then `None`
 - **A5:** `0 [('a', 11), ('b', 2)]`
 - **A6:** `[1, 9, 25]`
-- **B1:** returns `True` as soon as it finds one positive number, so `[1, -1]` gives `True`. Fix: `if x <= 0: return False`, with `return True` after the loop.
-- **B2:** `count + 1` doesn't update `count`, so it always returns 0. Fix: `count += 1`.
+- **B1:** returns `True` as soon as it finds one positive number, so `[1, -1]` gives `True`. Fix: `if x <= 0: return False`, with `return True` after the loop. Assert: `assert all_positive([1, -1]) == False`
+- **B2:** `count + 1` doesn't update `count`, so it always returns 0. Fix: `count += 1`. Assert: `assert count_vowels("hello") == 2`
+- **B3:** `counts[w] = 1` runs every time, even after the `+= 1`, so every count is 1 and `["a", "a"]` gives `{"a": 1}`. Fix: put `counts[w] = 1` under an `else:`. Assert: `assert word_counts(["a", "a"]) == {"a": 2}`
 </details>
