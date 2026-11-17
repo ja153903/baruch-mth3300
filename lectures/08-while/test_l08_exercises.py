@@ -1,6 +1,6 @@
 import math
 
-from l09_exercises import (
+from l08_exercises import (
     count_digits,
     first_space,
     gcd,

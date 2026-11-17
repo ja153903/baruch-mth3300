@@ -1,5 +1,8 @@
-def fizzbuzz(n: int) -> list[str]:
-    """For 1..n: "FizzBuzz" if divisible by 15, "Fizz" by 3, "Buzz" by 5, else the number as a string."""
+def fizzbuzz(n: int) -> str:
+    """For 1..n, separated by spaces: "FizzBuzz" if divisible by 15, "Fizz" by 3, "Buzz" by 5, else the number.
+
+    fizzbuzz(5) == "1 2 Fizz 4 Buzz"
+    """
     raise NotImplementedError
 
 

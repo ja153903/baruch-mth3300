@@ -2,15 +2,9 @@ def circle_area(r: float) -> float:
     raise NotImplementedError
 
 
-def is_leap_year(year: int) -> bool:
+def split_bill(total: float, people: int, tip_rate: float = 0.18) -> float:
     raise NotImplementedError
 
 
-def digit_sum(n: int) -> int:
+def sum_of_three_digits(n: int) -> int:
     raise NotImplementedError
-
-
-if __name__ == "__main__":
-    print(f"{circle_area(2)=}")
-    print(f"{is_leap_year(2024)=}")
-    print(f"{digit_sum(3300)=}")

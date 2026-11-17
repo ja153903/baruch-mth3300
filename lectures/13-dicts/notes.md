@@ -122,7 +122,7 @@ for _side in ["buy", "sell", "buy", "buy"]:
 print(_votes)
 ```
 
-Each vote **replaces** the count with 1. Like the accumulator bug in L10, the fix is to build on the old value.
+Each vote **replaces** the count with 1. Like the accumulator bug in L09, the fix is to build on the old value.
 
 ## 6. A finance example: valuing a portfolio
 

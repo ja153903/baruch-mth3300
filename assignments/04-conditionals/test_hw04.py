@@ -1,4 +1,4 @@
-from hw04 import is_triangle, letter_grade, sign
+from hw04 import is_leap_year, is_triangle, letter_grade, sign
 
 
 def test_letter_grade():
@@ -24,3 +24,10 @@ def test_is_triangle():
     assert not is_triangle(1, 1, 5)
     assert not is_triangle(0, 4, 4)
     assert not is_triangle(-3, 4, 5)
+
+
+def test_is_leap_year():
+    assert is_leap_year(2024)
+    assert not is_leap_year(2023)
+    assert not is_leap_year(1900)
+    assert is_leap_year(2000)

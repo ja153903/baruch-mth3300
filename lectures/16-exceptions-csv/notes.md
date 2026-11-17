@@ -234,7 +234,7 @@ Skills can include scripts. The AI runs your script instead of guessing, so the 
 
 1. Write `scripts/check_csv.py` inside a new `csv-check` skill folder (`.agents/skills/csv-check/`). It takes a CSV path, reads it with `csv.DictReader`, and prints the line number and the problem for every row with a missing or non-numeric `price`. Use `try`/`except ValueError`.
 2. Write `SKILL.md`. Its instructions tell the AI to run `uv run python .agents/skills/csv-check/scripts/check_csv.py <file>` and explain the results, not to read the CSV itself.
-3. Copy the whole folder, script included, to `.github/skills/csv-check/`, and run `uv run pytest lectures/08-code-quality`.
+3. Copy the whole folder, script included, to `.github/skills/csv-check/`, and run `uv run pytest lectures/10-loop-patterns`.
 4. Make a CSV with three bad rows of your own. Ask your AI: *"Is prices.csv clean?"* Did it run your script? Did it report all three rows?
 
 ## Exercises (40 minutes)

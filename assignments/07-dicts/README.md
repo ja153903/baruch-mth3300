@@ -19,6 +19,15 @@ Implement each function in `hw07.py`:
 3. Fix the function.
 4. In `AI_LOG.md`, explain the bug in one or two sentences.
 
+## Code quality
+
+Run these and fix what they report (ruff is from L12):
+
+```sh
+uv run ruff check
+uv run ty check
+```
+
 ## Check your work
 
 ```sh

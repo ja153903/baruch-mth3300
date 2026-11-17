@@ -1,4 +1,4 @@
-from l08_exercises import (
+from p_conditionals import (
     absolute,
     grade_points,
     is_valid_ticker,

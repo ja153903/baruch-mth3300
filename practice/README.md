@@ -11,8 +11,11 @@ uv run pytest practice -x             # everything, stopping at the first failur
 
 | Topic | Lectures | Covered by |
 |---|---|---|
+| `basics` | L01–L02 | Midterm |
 | `strings` | L03–L04 | Midterm |
-| `loops` | L07–L10 | Midterm |
+| `functions` | L05–L06 | Midterm |
+| `conditionals` | L07 | Midterm |
+| `loops` | L08–L10 | Midterm |
 | `lists` | L11–L12 | Midterm |
 | `dicts` | L13–L14 | Midterm |
 | `files` | L15–L16 | Final |

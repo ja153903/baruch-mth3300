@@ -111,7 +111,7 @@ print(f"{'AAPL':<6} {10:>6} {227.48:>8.2f} {10 * 227.48:>10,.2f}")
 print(f"{'NVDA':<6} {125:>6} {145.1:>8.2f} {125 * 145.1:>10,.2f}")
 ```
 
-Line up text on the left and numbers on the right, so the decimal points sit under each other. In L10, a loop will print a whole table like this for you.
+Line up text on the left and numbers on the right, so the decimal points sit under each other. In L09, a loop will print a whole table like this for you.
 
 ## 4. Debugging with `=`
 

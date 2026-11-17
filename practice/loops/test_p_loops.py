@@ -2,9 +2,9 @@ from p_loops import digital_root, fizzbuzz, is_prime
 
 
 def test_fizzbuzz():
-    assert fizzbuzz(0) == []
-    assert fizzbuzz(15)[-1] == "FizzBuzz"
-    assert fizzbuzz(5) == ["1", "2", "Fizz", "4", "Buzz"]
+    assert fizzbuzz(0) == ""
+    assert fizzbuzz(15).endswith("14 FizzBuzz")
+    assert fizzbuzz(5) == "1 2 Fizz 4 Buzz"
 
 
 def test_is_prime():

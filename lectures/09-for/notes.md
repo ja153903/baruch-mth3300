@@ -1,9 +1,9 @@
 ---
-title: "L10: for loops and accumulation"
+title: "L09: for loops and accumulation"
 marimo-version: "0.25.2"
 ---
 
-# L10: `for` loops and accumulation
+# L09: `for` loops and accumulation
 
 **By the end of this lecture you can:**
 
@@ -18,7 +18,7 @@ marimo-version: "0.25.2"
 import marimo as mo
 ```
 
-## 0. Warmup (from L09)
+## 0. Warmup (from L08)
 
 **Predict** the output before you run it. How many times does the loop body run?
 
@@ -190,7 +190,7 @@ def print_growth(principal: float, rate: float, years: int) -> None:
 print_growth(1000, 0.07, 10)
 ```
 
-**Question:** why is this a `for` loop, when `years_to_double` in L09 was a `while` loop?
+**Question:** why is this a `for` loop, when `years_to_double` in L08 was a `while` loop?
 
 ## 6. `enumerate`: the index and the value together
 
@@ -221,7 +221,7 @@ for _row in range(1, 4):
     print(_line)
 ```
 
-The inner loop runs completely for **each** step of the outer loop: 3 × 3 = 9 products.
+The inner loop runs completely for **each** step of the outer loop: 3 × 3 = 9 products. L10 does much more with loops inside loops.
 
 ## 8. Simulation with `random`
 
@@ -277,7 +277,7 @@ Then ask an AI for a one-line version of `sum_of_squares`. Could you explain it 
 
 ## Exercises (40 minutes)
 
-Open `l10_exercises.py` and run `uv run pytest lectures/10-for` as you go. Do them in order:
+Open `l09_exercises.py` and run `uv run pytest lectures/09-for` as you go. Do them in order:
 
 | Group | Functions |
 |---|---|

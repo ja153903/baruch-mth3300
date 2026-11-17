@@ -10,8 +10,8 @@ These are the tools this course uses. You install uv, git, and VS Code yourself 
 | [git and GitHub](#git-and-github) | saves snapshots and submits homework | [`setup.md`](setup.md#2-git) | week 1 |
 | [VS Code](#vs-code) | where you write code | [`setup.md`](setup.md#3-editor-vs-code) | week 1 |
 | [pytest](#pytest) | checks whether your code works | uv installs it | week 3 |
-| [ruff](#ruff) | finds style problems and tidies code | uv installs it | week 4 |
-| [ty](#ty) | finds type mistakes before you run | uv installs it | week 4 |
+| [ruff](#ruff) | finds style problems and tidies code | uv installs it | week 6 |
+| [ty](#ty) | finds type mistakes before you run | uv installs it | week 3 |
 | [marimo](#marimo) | opens the interactive lecture notes | uv installs it (course repo only) | week 1 |
 
 You never install Python, pytest, ruff, ty, or marimo by hand. Each homework folder lists them in its `pyproject.toml`, and the first `uv run` in that folder installs them.

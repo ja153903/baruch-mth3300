@@ -1,6 +1,6 @@
 import math
 
-from hw03 import circle_area, digit_sum, is_leap_year
+from hw03 import circle_area, split_bill, sum_of_three_digits
 
 
 def test_circle_area():
@@ -9,15 +9,14 @@ def test_circle_area():
     assert math.isclose(circle_area(2), 4 * math.pi)
 
 
-def test_is_leap_year():
-    assert is_leap_year(2024)
-    assert not is_leap_year(2023)
-    assert not is_leap_year(1900)
-    assert is_leap_year(2000)
+def test_split_bill():
+    assert split_bill(100, 4) == 29.5
+    assert split_bill(100, 4, tip_rate=0.2) == 30
+    assert split_bill(60, 1, 0) == 60
+    assert split_bill(10, 3) == 3.93
 
 
-def test_digit_sum():
-    assert digit_sum(0) == 0
-    assert digit_sum(7) == 7
-    assert digit_sum(3300) == 6
-    assert digit_sum(98765) == 35
+def test_sum_of_three_digits():
+    assert sum_of_three_digits(472) == 13
+    assert sum_of_three_digits(100) == 1
+    assert sum_of_three_digits(999) == 27

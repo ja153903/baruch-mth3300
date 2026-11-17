@@ -37,11 +37,11 @@ Each lecture meeting is about an hour of lecture, followed by about 40 minutes o
 | 3 | **L5** Functions | `def` | `03-functions` | Tutor |
 | 3 | **L6** Type hints and tests | pytest | | Tutor |
 | 4 | **L7** Booleans and conditionals | | `04-conditionals` | Tutor |
-| 4 | **L8** Code quality | ruff, ty | | Tutor |
-| 5 | **L9** `while` loops | | `05-loops` | Tutor |
-| 5 | **L10** `for` loops and accumulation | `range`, `enumerate`, `random` | | Tutor |
+| 4 | **L8** `while` loops | | | Tutor |
+| 5 | **L9** `for` loops and accumulation | `range`, `enumerate`, `random` | `05-loops` | Tutor |
+| 5 | **L10** Loop patterns and debugging | `breakpoint()` | | Tutor |
 | 6 | **L11** Lists and slicing | | `06-lists` | Tutor |
-| 6 | **L12** Tuples and comprehensions | `zip(strict=True)`, `pairwise`, `batched` | | Tutor |
+| 6 | **L12** Tuples and comprehensions | `zip(strict=True)`, `pairwise`, `batched`, ruff | | Tutor |
 | 7 | **L13** Dicts | `frozendict` | `07-dicts` | Tutor |
 | 7 | **L14** Sets, counting, midterm review | `collections.Counter` | | Tutor |
 | 8 | **Midterm** | | | No AI |
@@ -63,7 +63,7 @@ Each lecture meeting is about an hour of lecture, followed by about 40 minutes o
 Homework is due the week after it's assigned. Each one has an AI exercise as well as the coding tasks, which build up how students work with AI:
 
 - **Weeks 1–4, AI explains:** asking about errors, concepts, and wrong predictions, and reading the `AGENTS.md` instructions your AI follows.
-- **Weeks 5–9, AI debugs and reviews:** trying first, then asking, and judging AI suggestions. You write your first **skills** (L08, L14, L16).
+- **Weeks 5–9, AI debugs and reviews:** trying first, then asking, and judging AI suggestions. You write your first **skills** (L10, L12, L14, L16).
 - **Weeks 10–13, AI pair-programs:** writing a spec, building with AI, and verifying its claims. You give your AI tools with an **MCP server** (L20) and put the pieces together into your own workflow (L23).
 
 Everything you build for your AI uses open formats (`AGENTS.md`, Agent Skills, and MCP), so it works in Copilot, OpenCode, Codex, and Claude Code.

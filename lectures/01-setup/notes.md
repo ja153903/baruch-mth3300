@@ -246,7 +246,7 @@ Your AI reads instructions before it answers you. Open `AGENTS.md` at the top of
 3. Paste the error into Copilot Chat and ask: *"Explain this error."* The course comes with a **skill** called `explain-error` (in `.github/skills/`) that tells the AI how to explain errors without fixing your code. Watch for it in the answer.
 4. Fix the code yourself. Write one sentence in your own words about what went wrong.
 
-You'll write your own skills starting in L08.
+You'll write your own skills starting in L10.
 
 ## Exercises (40 minutes)
 

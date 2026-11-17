@@ -133,7 +133,7 @@ print(_by_ticker.most_common(1), sum(_by_ticker.values()))
 
 ### A simulation: rolling two dice
 
-With `random` from L10, a `Counter` shows the shape of a distribution. A sum of 7 is the most likely, with probability 6/36, and 2 and 12 are the least likely, with 1/36 each.
+With `random` from L09, a `Counter` shows the shape of a distribution. A sum of 7 is the most likely, with probability 6/36, and 2 and 12 are the least likely, with 1/36 each.
 
 ```python {.marimo}
 import random
@@ -245,7 +245,7 @@ Turn your exam prep into a skill you can reuse before every exam.
 1. Create a `practice-quiz` skill in `.agents/skills/` and `.github/skills/`. Its instructions should tell the AI to write five "predict the output" questions on the topics you name, using only features from this course, with the answers hidden until you ask for them.
 2. Write the description carefully. It's the only part the AI reads before deciding whether to use the skill. Try *"quiz me on dicts"* and *"give me practice problems on sets"*. If the skill doesn't load for one of them, add those words to the description.
 3. Do the questions **without running the code**, then check yourself. Bring any you missed to office hours.
-4. Run `uv run pytest lectures/08-code-quality` to check the skill's format.
+4. Run `uv run pytest lectures/10-loop-patterns` to check the skill's format.
 
 ## Exercises (40 minutes)
 

@@ -8,3 +8,7 @@ def sign(x: float) -> int:
 
 def is_triangle(a: float, b: float, c: float) -> bool:
     raise NotImplementedError
+
+
+def is_leap_year(year: int) -> bool:
+    raise NotImplementedError

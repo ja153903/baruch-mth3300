@@ -229,7 +229,7 @@ You've now built the three pieces every coding AI shares. They're open formats, 
 | Piece | What it does | You built one in |
 |---|---|---|
 | `AGENTS.md` | rules the AI follows in a folder | read since L01 |
-| **Skill** (`SKILL.md`) | instructions, and optionally scripts, loaded when a task matches the description | L08, L14, L16 |
+| **Skill** (`SKILL.md`) | instructions, and optionally scripts, loaded when a task matches the description | L10, L12, L14, L16 |
 | **MCP server** | Python functions the AI can call as tools | L20 |
 
 Each tool also has extras that work **only in that tool**: plugins, hooks, slash commands, and subagents. A **plugin** is mostly a package: a bundle of skills and MCP servers, plus that tool's extras, so someone else can install them in one step. Plugin formats differ from tool to tool.
@@ -238,7 +238,7 @@ So build in the shared pieces first, test them like any other code, and package 
 
 ## AI activity: the full loop, live
 
-As a class, pick a spec from the list below. Write the tests **first**, together. Then ask an AI for the code, run the tests, and review it with the checklist from section 6. This time, let the agent use your `readability-review` skill from L08 for the review step, and check that it actually loaded.
+As a class, pick a spec from the list below. Write the tests **first**, together. Then ask an AI for the code, run the tests, and review it with the checklist from section 6. This time, let the agent use your `readability-review` skill from L12 for the review step, and check that it actually loaded.
 
 - `is_palindrome(text)`, ignoring case, spaces, and punctuation
 - `clamp(x, low, high)`, which raises `ValueError` if `low > high`

@@ -7,8 +7,8 @@
 Implement each function in `hw03.py`:
 
 1. `circle_area(r)`: return the area of a circle with radius `r`. Use `math.pi`.
-2. `is_leap_year(year)`: return `True` if `year` is a leap year. A year is a leap year if it's divisible by 4, except years divisible by 100, unless they're also divisible by 400.
-3. `digit_sum(n)`: return the sum of the digits of a non-negative integer `n`. For example, `digit_sum(3300) == 6`.
+2. `split_bill(total, people, tip_rate=0.18)`: return what each person pays when `people` split `total` plus a tip, rounded to cents. For example, `split_bill(100, 4) == 29.5`, and `split_bill(100, 4, tip_rate=0.2) == 30.0`.
+3. `sum_of_three_digits(n)`: return the sum of the digits of a three-digit number. For example, `sum_of_three_digits(472) == 13`. Hint: `//` and `%` from L02.
 
 **AI exercise:** before you run this code, write down exactly what you predict it will print:
 

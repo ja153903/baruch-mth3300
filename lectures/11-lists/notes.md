@@ -191,7 +191,7 @@ print(_shares)
 
 ## 6. Building a new list with a loop
 
-The accumulator pattern from L10 works for lists too: start with `[]`, and `append` inside the loop.
+The accumulator pattern from L09 works for lists too: start with `[]`, and `append` inside the loop.
 
 ```python {.marimo}
 def above(xs: list[float], threshold: float) -> list[float]:

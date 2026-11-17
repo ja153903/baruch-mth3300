@@ -12,6 +12,7 @@ marimo-version: "0.25.2"
 - walk through two lists together with `zip`
 - write list comprehensions, including Python 3.15's unpacking form
 - walk through neighbors and chunks with `itertools`
+- use clear names and named constants, and let ruff find style problems
 
 ```python {.marimo hide_code="true"}
 import marimo as mo
@@ -210,11 +211,89 @@ print(f"Best: day {_best_day}, {_best_return:+.1%}")
 
 **Question:** `max` compares the tuples `(r, day)`. Why does that find the best return? What would `max((day, r) ...)` find instead?
 
-## AI activity: which is clearer?
+## 10. Tidy code: names, constants, and ruff
 
-1. Write `[x for row in rows for x in row]` and `[*row for row in rows]` side by side. Ask an AI which is clearer and why. Do you agree?
-2. The unpacking form is new in Python 3.15, so the AI may not know it. If it says the second version is a syntax error, run it, and show the AI the result.
-3. Ask it to rewrite the index loop from L11, section 7, with `zip`. Check that both versions print the same total.
+Your functions are getting longer, so other people (and you, next week) need to be able to read them. Compare:
+
+```python {.marimo}
+def f(a, b):
+    c = a * b / 100
+    return a - c
+
+
+def sale_price(price: float, discount_percent: float) -> float:
+    discount = price * discount_percent / 100
+    return price - discount
+
+
+print(f(80, 25), sale_price(80, 25))
+```
+
+| What | Style | Example |
+|---|---|---|
+| variables and functions | lowercase words joined by `_` | `sale_price`, `discount_percent` |
+| constants: values that never change | all capitals | `NYC_SALES_TAX` |
+| booleans | a yes-or-no question | `is_member`, `has_discount` |
+
+A **magic number** is a number in the code with no explanation. Is `0.08875` a tax, a fee, or a typo? Give it a name, like `NYC_SALES_TAX = 0.08875`, at the top of the file. A typo in a name gives a `NameError`; a typo in a number gives a wrong answer that looks fine.
+
+### ruff
+
+ruff reads your code without running it, like ty does for types (L06):
+
+```sh
+uv run ruff check          # find problems: unused imports, unused variables...
+uv run ruff check --fix    # fix the safe ones automatically
+uv run ruff format         # consistent spacing and layout
+```
+
+For this messy `tip.py`:
+
+```text
+import math
+
+
+def tip(bill,rate = 0.2):
+    total=bill*rate
+    return bill*rate
+```
+
+`uv run ruff check` finds two problems (output shortened):
+
+```text
+F401 [*] `math` imported but unused
+ --> tip.py:1:8
+F841 Local variable `total` is assigned to but never used
+ --> tip.py:5:5
+Found 2 errors.
+```
+
+`[*]` means `ruff check --fix` can fix it for you. `uv run ruff format` fixes the spacing. Unused names often point at a real bug: here, the author computed `total` and then forgot to use it.
+
+ruff and ty only check what the code *looks like*. They can't tell whether `sale_price` gives the right answer. That's what tests are for.
+
+## AI activity: a readability skill
+
+In L10 you wrote a skill that helps you trace loops. This one reviews code for readability, without rewriting it.
+
+1. Create `.agents/skills/readability-review/SKILL.md`:
+
+   ```markdown
+   ---
+   name: readability-review
+   description: Reviews Python code for readability (names, magic numbers, long functions) without rewriting it. Use when a student asks for a code review or asks whether their code is clear.
+   ---
+
+   # Readability review
+
+   1. Run `uv run ruff check` and `uv run ty check` on the file and report what they find.
+   2. Point out at most three readability problems: unclear names, magic numbers, or functions doing too much.
+   3. For each one, explain why it hurts readability. Don't rewrite the code; the student fixes it.
+   ```
+
+2. Copy the folder to `.github/skills/readability-review/`, and run `uv run pytest lectures/10-loop-patterns` to check the format.
+3. Finish today's exercises, then ask Copilot Chat: *"Review l12_exercises.py for readability."* Did it use your skill? Compare its suggestions with what ruff found on its own.
+4. Write `[x for row in rows for x in row]` and `[*row for row in rows]` side by side, and ask which is clearer. The second form is new in Python 3.15, so the AI may not know it. If it says it's a syntax error, run it, and show the AI the result.
 
 ## Exercises (40 minutes)
 

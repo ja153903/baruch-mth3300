@@ -116,7 +116,7 @@ def balance(principal: float, rate: float, years: int) -> float:
 print(f"{balance(1000, 0.07, 10):,.2f}")
 ```
 
-It matches year 10 of the growth table in L10, which used a loop.
+It matches year 10 of the growth table in L09, which used a loop.
 
 ## 5. Recursion that branches: the Tower of Hanoi
 

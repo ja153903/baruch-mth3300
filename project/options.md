@@ -12,7 +12,7 @@ Each option has a **core** that's required and **extensions** you can add for de
 
 - **Core:** price a European call option by simulating stock paths, and compare the result with the Black–Scholes formula.
 - **Extensions:** put options; show how the error shrinks as the number of simulations grows; check a fast version against a slow one on random inputs.
-- **Lectures used:** L10 (simulation), L19 (measurement), L23 (slow vs. fast checks).
+- **Lectures used:** L09 (simulation), L19 (measurement), L23 (slow vs. fast checks).
 
 ## 3. Portfolio backtester
 
@@ -24,7 +24,7 @@ Each option has a **core** that's required and **extensions** you can add for de
 
 - **Core:** a command-line tool that factors integers, finds GCDs and LCMs, and lists primes with a sieve.
 - **Extensions:** modular inverses; test the Goldbach conjecture up to N; measure sieve vs. trial-division performance.
-- **Lectures used:** L09–L10 (loops), L17 (recursion), L19 (Big-O).
+- **Lectures used:** L08–L10 (loops), L17 (recursion), L19 (Big-O).
 
 ## 5. Gradebook
 
@@ -36,5 +36,5 @@ Each option has a **core** that's required and **extensions** you can add for de
 
 - **Core:** pick a domain from options 1–5 and build it as tools for an AI. Write the core functions in Python with tests, expose them through an MCP server, and write one skill that tells the AI when and how to use them. Demo it working in **two** different AI tools, for example Copilot and OpenCode.
 - **Extensions:** a skill with its own script; a second skill that chains tools together; package everything as a plugin for one tool, and explain in your README what doesn't carry over to the other.
-- **Lectures used:** L08–L16 (skills), L20 (MCP and dataclasses), L23 (portable workflows).
+- **Lectures used:** L10–L16 (skills), L20 (MCP and dataclasses), L23 (portable workflows).
 - **In the defense:** expect to explain why the AI chose your tool, what the type hints tell it, and what happens when it passes bad input.

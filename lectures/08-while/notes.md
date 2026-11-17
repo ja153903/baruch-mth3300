@@ -1,9 +1,9 @@
 ---
-title: "L09: while loops"
+title: "L08: while loops"
 marimo-version: "0.25.2"
 ---
 
-# L09: `while` loops
+# L08: `while` loops
 
 **By the end of this lecture you can:**
 
@@ -19,7 +19,7 @@ marimo-version: "0.25.2"
 import marimo as mo
 ```
 
-## 0. Warmup (from L08)
+## 0. Warmup (from L07)
 
 **Find the bug.** Teenagers are 13 to 19 years old. What does this print, and what should it print?
 
@@ -191,7 +191,7 @@ while _i < len(_word):
     _i += 1
 ```
 
-The test is `_i < len(_word)`, not `<=`, because the last index is `len(_word) - 1`. In L10, the `for` loop will do this with less to get wrong.
+The test is `_i < len(_word)`, not `<=`, because the last index is `len(_word) - 1`. In L09, the `for` loop will do this with less to get wrong.
 
 ## 8. `break`
 
@@ -231,7 +231,7 @@ Write your trace as a table, like the one in section 2. Then fix the loop, and a
 
 ## Exercises (40 minutes)
 
-Open `l09_exercises.py` and run `uv run pytest lectures/09-while` as you go. If the tests seem stuck, one of your loops never ends: press Ctrl-C and trace it. Do them in order:
+Open `l08_exercises.py` and run `uv run pytest lectures/08-while` as you go. If the tests seem stuck, one of your loops never ends: press Ctrl-C and trace it. Do them in order:
 
 | Group | Functions |
 |---|---|
