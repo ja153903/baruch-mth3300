@@ -32,7 +32,7 @@ print(_count)
 
 ## 1. Lists hold sequences of values
 
-A list keeps values in order. Write it with square brackets, and put commas between the items. Many functions you already know work on lists.
+You met lists in L09. A list keeps values in order. Write it with square brackets, and put commas between the items. Many functions you already know work on lists.
 
 ```python {.marimo}
 prices = [101.5, 99.0, 103.25, 98.75]

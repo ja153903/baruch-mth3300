@@ -38,7 +38,7 @@ Each lecture meeting is about an hour of lecture, followed by about 40 minutes o
 | 3 | **L6** Type hints and tests | pytest | | Tutor |
 | 4 | **L7** Booleans and conditionals | | `04-conditionals` | Tutor |
 | 4 | **L8** `while` loops | | | Tutor |
-| 5 | **L9** `for` loops and accumulation | `range`, `enumerate`, `random` | `05-loops` | Tutor |
+| 5 | **L9** `for` loops, accumulation, and a first look at lists | `range`, `enumerate`, `random` | `05-loops` | Tutor |
 | 5 | **L10** Loop patterns and debugging | `breakpoint()` | | Tutor |
 | 6 | **L11** Lists and slicing | | `06-lists` | Tutor |
 | 6 | **L12** Tuples and comprehensions | `zip(strict=True)`, `pairwise`, `batched`, ruff | | Tutor |

@@ -1,12 +1,13 @@
 ---
-title: "L09: for loops and accumulation"
+title: "L09: for loops and a first look at lists"
 marimo-version: "0.25.2"
 ---
 
-# L09: `for` loops and accumulation
+# L09: `for` loops and a first look at lists
 
 **By the end of this lecture you can:**
 
+- make a list, index it, and loop over it
 - loop over a string, a list, or a `range`
 - avoid off-by-one errors with `range`
 - use the accumulator pattern to sum, count, and build up results
@@ -53,13 +54,6 @@ while _i < len(_word):
     _i += 1
 ```
 
-A `for` loop works on any sequence, including a list:
-
-```python {.marimo}
-for _price in [19.99, 5.25, 102.00]:
-    print(f"${_price:>8.2f}")
-```
-
 **Predict:** what is the value of `_letter` after the loop below finishes?
 
 ```python {.marimo}
@@ -68,7 +62,39 @@ for _letter in "Baruch":
 print(_letter)
 ```
 
-## 2. `range`
+## 2. A first look at lists
+
+A **list** holds several values in order, inside square brackets, separated by commas. Indexing works the same way as for strings (L03): the first item is at 0, and `-1` is the last.
+
+```python {.marimo}
+prices = [19.99, 5.25, 102.00]
+print(prices[0], prices[-1], len(prices))
+print(sum(prices), max(prices), min(prices))
+```
+
+A `for` loop takes each item of a list in turn, just as it takes each character of a string:
+
+```python {.marimo}
+for _price in prices:
+    print(f"${_price:>8.2f}")
+```
+
+To build a list, start with an empty list, `[]`, and `append` an item each time through the loop:
+
+```python {.marimo}
+_digits = []
+for _ch in "a1b22c3":
+    if _ch.isdigit():
+        _digits.append(int(_ch))
+print(_digits, sum(_digits))
+```
+
+- `list(...)` turns a sequence into a list, so you can see all its items at once: `list("abc")` is `['a', 'b', 'c']`.
+- A parameter that takes a list of whole numbers has the type hint `list[int]` (L06).
+
+That's all you need for now. L11 covers slicing, changing a list in place, and the surprises that come with it.
+
+## 3. `range`
 
 `range(stop)`, `range(start, stop)`, and `range(start, stop, step)`. The **stop is never included**.
 
@@ -97,7 +123,7 @@ print("range(1, n + 1):", list(range(1, _n + 1)))
 - `1, 3, 5, 7, 9`
 - `10, 9, 8, ..., 1`
 
-## 3. The accumulator pattern
+## 4. The accumulator pattern
 
 1. **Before** the loop: start with an identity value (`0` for sums, `1` for products, `""` for strings).
 2. **Inside** the loop: update it with each item.
@@ -142,7 +168,7 @@ print(broken_sum(10), "but we wanted", 55)
 
 **Trace it:** what is `total` after each step? Move one line to fix it.
 
-## 4. Counting with a condition
+## 5. Counting with a condition
 
 Counting is accumulating `1` each time a condition is true.
 
@@ -175,7 +201,7 @@ print(has_digit("MTH3300"), has_digit("Python"))
 
 **Predict:** what goes wrong if you put `return False` *inside* the loop, as an `else`?
 
-## 5. A finance example: a growth table
+## 6. A finance example: a growth table
 
 Accumulators and f-strings together. The balance is the accumulator.
 
@@ -192,7 +218,7 @@ print_growth(1000, 0.07, 10)
 
 **Question:** why is this a `for` loop, when `years_to_double` in L08 was a `while` loop?
 
-## 6. `enumerate`: the index and the value together
+## 7. `enumerate`: the index and the value together
 
 ```python {.marimo}
 tickers = ["AAPL", "MSFT", "NVDA"]
@@ -209,7 +235,7 @@ for _ticker in tickers:
     _position += 1
 ```
 
-## 7. Loops inside loops
+## 8. Loops inside loops
 
 **Predict:** how many lines does this print?
 
@@ -223,7 +249,7 @@ for _row in range(1, 4):
 
 The inner loop runs completely for **each** step of the outer loop: 3 × 3 = 9 products. L10 does much more with loops inside loops.
 
-## 8. Simulation with `random`
+## 9. Simulation with `random`
 
 You can estimate a probability by trying something many times and counting. What fraction of rolls of two dice sum to 7? (The exact answer is 1/6 ≈ 0.1667.)
 
@@ -248,7 +274,7 @@ for _trials in [10, 100, 10_000, 1_000_000]:
 - `random.seed(3300)` makes the "random" numbers the same on every run, so your results are reproducible.
 - More trials means a closer estimate.
 
-## 9. `for` or `while`?
+## 10. `for` or `while`?
 
 - Use **`for`** when you know what you're looping over: the characters, the items, or the numbers 1 to n.
 - Use **`while`** when you're looping *until* something happens, and you can't know in advance how many steps that takes.
